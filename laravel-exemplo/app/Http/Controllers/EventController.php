@@ -7,12 +7,17 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    public function index(Request $request)
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
     {
-        $event = Event::where('id', $request->id)->first();
-        return response()->json($event);
+        //
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         $event = new Event();
@@ -21,4 +26,30 @@ class EventController extends Controller
 
         return response()->json($event);
     }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Event $event)
+    {
+        return response()->json($event);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Event $event)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Event $event)
+    {
+        //
+    }
 }
+
+
