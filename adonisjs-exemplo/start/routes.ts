@@ -8,9 +8,16 @@
 */
 
 import router from '@adonisjs/core/services/router'
+const EventsController = () => import('#controllers/events_controller')
 
 router.get('/', async () => {
   return {
     hello: 'world',
   }
 })
+
+router
+  .group(() => {
+    router.resource('events', EventsController)
+  })
+  .prefix('/api')

@@ -5,10 +5,10 @@
   "type": "module",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "node bin/server.js",
-    "build": "node ace build",
-    "dev": "node ace serve --hmr",
-    "test": "node ace test",
+    "start": "bun bin/server.ts",
+    "build": "bun ace build",
+    "dev": "bun ace serve --hmr",
+    "test": "bun ace test",
     "lint": "eslint .",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit"
