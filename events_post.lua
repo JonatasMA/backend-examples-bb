@@ -12,5 +12,5 @@ local function generate_uuid()
 end
 
 wrk.method                  = "POST"
-wrk.body                    = "name=" .. generate_uuid()
-wrk.headers["Content-Type"] = "application/x-www-form-urlencoded"
+wrk.body                    = '{"name": "' .. generate_uuid() .. '"}'
+wrk.headers["Content-Type"] = "application/json"
